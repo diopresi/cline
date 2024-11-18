@@ -45,6 +45,7 @@ export class OpenRouterHandler implements ApiHandler {
 			case "anthropic/claude-3-haiku:beta":
 			case "anthropic/claude-3-opus":
 			case "anthropic/claude-3-opus:beta":
+			case "claude-3.5-sonnet":
 				openAiMessages[0] = {
 					role: "system",
 					content: [
@@ -92,6 +93,7 @@ export class OpenRouterHandler implements ApiHandler {
 			case "anthropic/claude-3-5-haiku:beta":
 			case "anthropic/claude-3-5-haiku-20241022":
 			case "anthropic/claude-3-5-haiku-20241022:beta":
+			case "claude-3.5-sonnet":
 				maxTokens = 8_192
 				break
 		}
